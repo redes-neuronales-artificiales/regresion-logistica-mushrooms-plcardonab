@@ -57,6 +57,7 @@ La información contenida en la muestra es la siguiente:
 """
 
 import pandas as pd
+from sqlalchemy import false
 
 
 def pregunta_01():
@@ -69,7 +70,7 @@ def pregunta_01():
     # Remueva la columna `veil-type` del DataFrame `df`.
     # Esta columna tiene un valor constante y no sirve para la detección de hongos.
     # ____.____(____)
-    # df.drop("veil-type", axis=1, inplace=True)
+    df.drop("veil_type", axis=1, inplace=false)
 
     # Asigne la columna `type` a la variable `y`.
     # ____ = ____
@@ -186,7 +187,7 @@ def pregunta_04():
     #     y_true=____,
     #     y_pred=____.____(____),
     # )
-    cfm_test=confusion_matrix(
+    cfm_test = confusion_matrix(
         y_true=y_test,
         y_pred=pipeline.predict(X_test)
     )

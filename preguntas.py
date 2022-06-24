@@ -179,7 +179,8 @@ def pregunta_04():
     # )
     cfm_train = confusion_matrix(
         y_true=y_train,
-        y_pred=pipeline.predict(X_train),
+        y_pred=pipeline.predict(X_train)
+    )
 
     # cfm_test = ____(
     #     y_true=____,

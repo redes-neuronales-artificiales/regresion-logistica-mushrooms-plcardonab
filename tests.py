@@ -15,7 +15,7 @@ def test_01():
     # python3 tests.py 01
 
     X, y = preguntas.pregunta_01()
-    assert X.shape == (8124, 21)
+    assert X.shape == (8124, 22)
     assert y.shape == (8124,)
     assert "veil_type" not in X.columns
     assert "type" not in X.columns

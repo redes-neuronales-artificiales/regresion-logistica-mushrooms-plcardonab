@@ -57,7 +57,6 @@ La información contenida en la muestra es la siguiente:
 """
 
 import pandas as pd
-from sqlalchemy import false
 
 
 def pregunta_01():
@@ -70,7 +69,7 @@ def pregunta_01():
     # Remueva la columna `veil-type` del DataFrame `df`.
     # Esta columna tiene un valor constante y no sirve para la detección de hongos.
     # ____.____(____)
-    df.drop("veil_type", axis=1, inplace=false)
+    df.drop("veil_type", axis=1, inplace=False)
 
     # Asigne la columna `type` a la variable `y`.
     # ____ = ____
